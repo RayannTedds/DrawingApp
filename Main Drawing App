@@ -1,0 +1,120 @@
+PFont f; //used for the text within the application
+
+void setup(){
+  size(240,387); //canva size, divided by 5
+  background(255); //white background
+  f = createFont("Calibri",14,true); //Arial, 16 point
+}
+
+void draw(){
+  if (mousePressed ==true){
+    line(mouseX,mouseY,pmouseX,pmouseY);
+  } //if the mouse is pressed it will draw a continuous line
+  
+  fill(3,0,255);
+  rect(0,336,48,24); //colour, coordinates and positioning of the blue button
+  
+  fill(134,242,255);
+  rect(48,336,48,24); //colour, coordinates and positioning of the sky blue button
+  
+  fill(0,255,27);
+  rect(96,336,48,24); //colour, coordinates and positioning of the green button
+  
+  fill(180,180,180);
+  rect(144,336,48,24); //colour, coordinates and positioning of the grey button
+  
+  fill(0);
+  rect(192,336,48,24); //colour, coordinates and positioning of the black button
+  
+  fill(255,0,0);
+  rect(0,312,48,24); //colour, coordinates and positioning of the red button
+  
+  fill(255,5,168);
+  rect(48,312,48,24); //colour, coordinates and positioning of the pink button
+
+  fill(255,234,191);
+  rect(96,312,48,24); //colour, coordinates and positioning of the peach button
+
+  fill(255,170,10);
+  rect(144,312,48,24); //colour, coordinates and positioning of the orange button
+
+  fill(255,255,0);
+  rect(192,312,48,24); //colour, coordinates and positioning of the yellow button
+
+  fill(105);
+  rect(0,360,96,30); //colour, coordinates and positioning of the save button
+
+  fill(155);
+  rect(96,360,96,15); //colour, coordinates and positioning of the eraser button
+
+  fill(150);
+  rect(96,375,96,15); //colour, coordinates and positioning of the clear button
+
+  fill(100);
+  rect(144,360,96,30); //colour, coordinates and positioning of the back button
+  
+  textFont(f,11); //calling up the font and size
+  fill(0); //black writing 
+  text("Red",15,327); //position and wording of text
+  text("Pink",63,327);
+  text("Peach",108,327);
+  text("Orange",152,327);
+  text("Yellow",202,327);
+  text("Blue",15,352);
+  text("Sky Blue",54,352);
+  text("Green",106,352);
+  text("Grey",158,352);
+  
+  textFont(f,11);
+  fill(255);
+  text("Black",205,352);
+  
+  textFont(f,14);//colour, coordinates and positioning of the save and back button
+  fill(0);
+  text("Save",35,377);
+  text("Back",180,377);
+  
+  textFont(f,10);//colour, coordinates and positioning of the eraser and clear button
+  fill(0);
+  text("Eraser",108,371);
+  text("Clear",110,385);
+}
+
+void mousePressed() {
+  if (mouseX > 0 && mouseX < 0+48 && mouseY > 312 && mouseY < 312+24) {
+    stroke(255,0,0);//drawing with a red line
+  }
+  if (mouseX > 48 && mouseX < 48+48 && mouseY > 312 && mouseY < 312+24) {
+    stroke(255,5,168);//drawing with a pink line
+  }
+  if (mouseX > 96 && mouseX < 96+48 && mouseY > 312 && mouseY < 312+24) {
+    stroke(255,234,191);//drawing with a peach line
+  }
+  if (mouseX > 144 && mouseX < 144+48 && mouseY > 312 && mouseY < 312+24) {
+    stroke(255,170,10);//drawing with an orange line
+  }
+  if (mouseX > 192 && mouseX < 192+48 && mouseY > 312 && mouseY < 312+24) {
+    stroke(225,225,0);//drawing with a yellow line
+  }
+  if (mouseX > 192 && mouseX < 192+48 && mouseY > 336 && mouseY < 336+24) {
+    stroke(0);//drawing with a black line
+  }
+  if (mouseX > 144 && mouseX < 144+48 && mouseY > 336 && mouseY < 336+24) {
+    stroke(180,180,180);//drawing with a grey line
+  }
+  if (mouseX > 96 && mouseX < 96+48 && mouseY > 336 && mouseY < 336+24) {
+    stroke(0,255,27);//drawing with a green line
+  }
+  if (mouseX > 48 && mouseX < 48+48 && mouseY > 336 && mouseY < 336+24) {
+    stroke(134,242,255);//drawing with a sky blue line
+  }
+  if (mouseX > 0 && mouseX < 0+48 && mouseY > 336 && mouseY < 336+24) {
+    stroke(3,0,255);//drawing with a blue line
+  }
+  if (mouseX > 96 && mouseX < 96+96 && mouseY > 360 && mouseY < 360+15) {
+    stroke(255);//drawing with the eraser
+  }
+  if (mouseX > 96 && mouseX < 96+96 && mouseY > 375 && mouseY < 375+15) {
+    background(255);
+  }//drawing with a black line
+}
